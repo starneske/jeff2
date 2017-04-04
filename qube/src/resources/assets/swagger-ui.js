@@ -14316,8 +14316,8 @@ var nativeMax = Math.max;
  *     (_.size(names) > 1 ? ', & ' : '') + _.last(names);
  * });
  *
- * say('hello', 'fred', 'barney', 'pebbles');
- * // => 'hello fred, barney, & pebbles'
+ * say('jeff2', 'fred', 'barney', 'pebbles');
+ * // => 'jeff2 fred, barney, & pebbles'
  */
 function restParam(func, start) {
   if (typeof func != 'function') {
