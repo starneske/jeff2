@@ -1,38 +1,38 @@
-id: 34676a9e-9389-4849-9c36-3ef599599968
-name: jeff2
-apptype: api
-language: python
+id: '34676a9e-9389-4849-9c36-3ef599599968'
+name: 'jeff2'
+apptype: 'api'
+language: 'python'
 toolchain:
-  id: 58e2fba2b5667d001e4a3346
-  name: my-python-tools-2
+  id: '58f01e0d8ef1e700214218c3'
+  name: 'Qubeship-Java-Toolchain'
 opinion:
-  id: 58e2fb9fe2a801000e8cb43e
-  name: Qubeship Out of the Box Opinion
+  id: '58e2fb9fe2a801000e8cb43e'
+  name: 'Qubeship Out of the box opinion'
 endpoint:
-  id: 
-  name: Default Endpoint
-  type: 
-pipeline: build_bake_test_deployment:v0.1
+  id: '58e2fba32a0603000b3e58a6'
+  name: 'Qubeship Sandbox Cluster'
+  type: 'target'
+pipeline: 'build_bake_test_deployment:v0.1'
 security:
-  keys_loc: "conf/"
+  keys_loc: 'conf/'
 notification:
-  type: slack
-  domain: 
-  channel: qubeship
+  type: 'slack'
+  domain: ''
+  channel: 'qubeship'
 build:
   image:
-    name: python:3-onbuild
+    name: 'python:3-onbuild'
     onbuild:
-      - pip install tox wheel && pip list && tox && python setup.py bdist_wheel
-  publish_artifact: dist/
+    - pip install tox wheel && pip list && tox && python setup.py bdist_wheel
+  publish_artifact: 'dist/'
   lint: true
 bake:
   strategy: docker
   script: Dockerfile
   repositories:
-    - name: google
-      prefix: gcr.io/qubeship-partners
-      type: gcr
+  - name: google
+    prefix: gcr.io/qubeship-partners
+    type: gcr
 test:
   skip: true
   functional:
@@ -43,7 +43,8 @@ deployment:
   service_name: jeff2
   environments:
     prod:
-      - type: qubeship_managed
-        id: 
-        template_id: qube_external_app_v1
-        srcRepo: google
+    - type: qubeship_managed
+      id: ''
+      template_id: qube_external_app_v1
+      srcRepo: google
+containerName: jeff2
