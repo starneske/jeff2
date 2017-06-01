@@ -3,8 +3,8 @@ name: 'jeff2'
 apptype: 'api'
 language: 'python'
 toolchain:
-  id: '58f01e0d8ef1e700214218c3'
-  name: 'Qubeship-Java-Toolchain'
+  id: '58f01e0d8ef1e7001e4218c3'
+  name: 'Qubeship-Python-Toolchain'
 opinion:
   id: '58e2fb9fe2a801000e8cb43e'
   name: 'Qubeship Out of the box opinion'
